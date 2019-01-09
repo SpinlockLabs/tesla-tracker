@@ -37,7 +37,7 @@
                     <div class="justify-content-center d-flex btn-group" role="group">
                         <button id="btn-start" type="button" class="btn btn-success">Start Tracker</button>
                         <button id="btn-stop" type="button" class="btn btn-danger">Stop Tracker</button>
-                        <button id="btn-sleep" type="button" class="btn btn-info">Wake</button>
+                        <button id="btn-wake" type="button" class="btn btn-info">Wake</button>
                         <button id="btn-sleep" type="button" class="btn btn-warning">Sleep</button>
                     </div>
             </div>
@@ -76,7 +76,7 @@
                 });
             });
 
-            $("#btn-wake-vehicle").click(function() {
+            $("#btn-wake").click(function() {
                 $.post("/api/tracker/{{id}}/wake_vehicle", function() {
                     update();
                 });
