@@ -34,6 +34,9 @@ handleVehicleRequest(int vehicleId, HttpRequest request, HttpResponse response) 
       tracker.start();
     } else if (sub == "sleep") {
       tracker.sleep();
+    } else if (sub == "wake") {
+      await tracker.vehicle.wake();
+      tracker.start();
     } else {
       response.statusCode = HttpStatus.badRequest;
       response.writeln("Unknown command.");
@@ -104,6 +107,8 @@ main(List<String> args) async {
     var tracker = new VehicleTracker(vehicle, conn);
     tracker.start();
     trackers[tracker.vehicle.id] = tracker;
+
+    print("New controller available at http://127.0.0.1:${config.httpPort}/control/${vehicle.id}");
   }
 
   await for (var request in server) {

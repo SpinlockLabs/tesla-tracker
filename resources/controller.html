@@ -35,8 +35,9 @@
                     <h5 id="vehicle-status" class="text-center"></h5>
 
                     <div class="justify-content-center d-flex btn-group" role="group">
-                        <button id="btn-start" type="button" class="btn btn-success">Start</button>
-                        <button id="btn-stop" type="button" class="btn btn-danger">Stop</button>
+                        <button id="btn-start" type="button" class="btn btn-success">Start Tracker</button>
+                        <button id="btn-stop" type="button" class="btn btn-danger">Stop Tracker</button>
+                        <button id="btn-sleep" type="button" class="btn btn-info">Wake</button>
                         <button id="btn-sleep" type="button" class="btn btn-warning">Sleep</button>
                     </div>
             </div>
@@ -71,6 +72,12 @@
 
             $("#btn-stop").click(function() {
                 $.post("/api/tracker/{{id}}/stop", function() {
+                    update();
+                });
+            });
+
+            $("#btn-wake-vehicle").click(function() {
+                $.post("/api/tracker/{{id}}/wake_vehicle", function() {
                     update();
                 });
             });

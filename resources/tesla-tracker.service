@@ -1,0 +1,13 @@
+[Unit]
+Description=Tesla Tracker
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dart bin/track.dart /opt/tesla-tracker/config.json
+WorkingDirectory=/opt/tesla-tracker
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=network-online.target

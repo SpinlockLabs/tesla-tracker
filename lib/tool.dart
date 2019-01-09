@@ -31,8 +31,8 @@ class TeslaTrackerConfig {
   String get dbHost => config["db.host"];
   int get dbPort => config["db.port"];
   String get dbName => config["db.name"];
-  String get dbUser => config["db.user"];
-  String get dbPassword => config["db.pass"];
+  String get dbUsername => config["db.username"];
+  String get dbPassword => config["db.password"];
 
   String get teslaEmail => config["tesla.email"];
   String get teslaPassword => config["tesla.password"];
@@ -45,7 +45,7 @@ class TeslaTrackerConfig {
       dbHost,
       dbPort,
       dbName,
-      username: dbUser,
+      username: dbUsername,
       password: dbPassword
     );
   }

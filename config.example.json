@@ -1,0 +1,11 @@
+{
+  "db.name": "tesla",
+  "db.host": "127.0.0.1",
+  "db.port": 5432,
+  "db.username": "tesla",
+  "db.password": "tesla",
+  "http.port": 8090,
+  "http.token": "MySecretToken",
+  "tesla.email": "me@example.com",
+  "tesla.password": "I<3Elon"
+}
