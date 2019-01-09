@@ -1,0 +1,7 @@
+name: tesla_tracker
+version: 0.0.1
+description: "Track your Tesla, smartly!"
+authors:
+- "Kenneth Endfinger <kaendfinger@gmail.com>"
+depdendencies:
+  postgres: ^1.0.2
