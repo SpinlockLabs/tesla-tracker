@@ -3,5 +3,7 @@ version: 0.0.1
 description: "Track your Tesla, smartly!"
 authors:
 - "Kenneth Endfinger <kaendfinger@gmail.com>"
-depdendencies:
+dependencies:
   postgres: ^1.0.2
+  tesla:
+    git: https://github.com/SpinlockLabs/tesla.dart.git
