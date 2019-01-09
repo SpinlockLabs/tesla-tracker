@@ -77,7 +77,7 @@
             });
 
             $("#btn-wake").click(function() {
-                $.post("/api/tracker/{{id}}/wake_vehicle", function() {
+                $.post("/api/tracker/{{id}}/wake", function() {
                     update();
                 });
             });
