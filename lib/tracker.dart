@@ -55,15 +55,15 @@ class VehicleTracker {
       }
 
       await _publishUptime(vehicle.state);
-
+    } catch (e, stack) {
+      print("ERROR: Failed to update vehicle: ${e}");
+      print(stack);
+    } finally {
       if (scheduled && _timer != null) {
         _timer = new Timer(const Duration(seconds: 30), () {
           _update(true);
         });
       }
-    } catch (e, stack) {
-      print("ERROR: Failed to update vehicle: ${e}");
-      print(stack);
     }
   }
 
