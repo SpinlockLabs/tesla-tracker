@@ -103,7 +103,7 @@ main(List<String> args) async {
 
   var server = await HttpServer.bind("0.0.0.0", config.httpPort);
 
-  for (var vehicle in await client.listAccountVehicles()) {
+  for (var vehicle in await client.listVehicles()) {
     var tracker = new VehicleTracker(vehicle, conn);
     tracker.start();
     trackers[tracker.vehicle.id] = tracker;

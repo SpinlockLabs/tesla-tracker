@@ -49,7 +49,7 @@ class VehicleTracker {
 
   Future _update(bool scheduled) async {
     try {
-      vehicle = await vehicle.client.getAccountVehicle(vehicle.id);
+      vehicle = await vehicle.client.getVehicle(vehicle.id);
       if (vehicle.state == "online") {
         await _publishState();
       }
