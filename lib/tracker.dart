@@ -22,7 +22,7 @@ class VehicleTracker {
     stop();
     phase = "started";
 
-    _timer = new Timer(const Duration(seconds: 30), () {
+    _timer = new Timer(const Duration(seconds: 5), () {
       _update(true);
     });
   }
@@ -60,7 +60,7 @@ class VehicleTracker {
       print(stack);
     } finally {
       if (scheduled && _timer != null) {
-        _timer = new Timer(const Duration(seconds: 30), () {
+        _timer = new Timer(const Duration(seconds: 5), () {
           _update(true);
         });
       }
